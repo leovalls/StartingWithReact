@@ -22,7 +22,7 @@
 		"webpack-cli": "^3.3.10"
 	},
 	"scripts": {
-		"dev": "webpack-dev-server --content-base src  --config webpack.config.js --progress --hot",
+		"dev": "SET NODE_ENV=development && webpack-dev-server --content-base src  --config webpack.config.js --progress --hot",
 		"build": "webpack-dev-server"
 	},
 	"author": "",
