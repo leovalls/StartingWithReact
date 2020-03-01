@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Movie from '../movie/Movie';
+import Shoutouts from '../shoutouts/Shoutouts';
 import MoviesStore from '../../stores/MoviesStore';
 
 export default class Movies extends React.Component {
@@ -21,8 +23,8 @@ export default class Movies extends React.Component {
             <div>
                 <h2>Movies List</h2>
                 <ul>{moviesList}</ul>
+                <Shoutouts/>
             </div>
-
         );
     }
 }
