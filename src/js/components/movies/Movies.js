@@ -23,7 +23,6 @@ export default class Movies extends React.Component {
             <div>
                 <h2>Movies List</h2>
                 <ul>{moviesList}</ul>
-                <Shoutouts/>
             </div>
         );
     }

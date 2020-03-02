@@ -8,11 +8,19 @@ export default class Movie extends React.Component {
 
         return (
             <li>
-                <div><h2>{title}</h2></div>
-                <div><p>{opening_crawl}</p></div>
-                <div>Director: {director}</div>
-                <div>Producer: {producer}</div>
-                <div>Release date: {release_date}</div>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        <h3 class="card-title">{title}</h3>
+                    </div>
+                    <div class="card-body">
+                        <div>{opening_crawl}</div>
+                    </div>
+                    <div class="card-footer  text-muted">
+                        <div>Director: {director}</div>
+                        <div>Producer: {producer}</div>
+                        <div>Release date: {release_date}</div>
+                    </div>
+                </div>
             </li>
         );
     }
