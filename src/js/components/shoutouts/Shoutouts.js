@@ -52,17 +52,21 @@ export default class Shoutouts extends React.Component {
 
         return (
             <div>
-                <h2>Shoutouts list</h2>
+                <h3>Shoutouts list</h3>
                 <form onSubmit={ this.createShoutout.bind(this) }>
-                    <label>Shoutout:
-                        <input name="newShoutout" type="text" value={ this.state.newShoutout }
-                            onChange={ this.handleInputChange } />
-                    </label>
-                    <label>Author:
-                        <input name="newName" type="text" value={ this.state.newName }
-                            onChange={ this.handleInputChange } />
-                    </label>
-                    <input type="submit" value="Shout it!" />
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="newShoutout">Shoutout:</label>
+                            <input id="newShoutout" name="newShoutout" type="text" value={ this.state.newShoutout }
+                                onChange={ this.handleInputChange } class="form-control" placeholder="Shoutout..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="newName">Author:</label>
+                            <input id="newName" name="newName" type="text" value={ this.state.newName }
+                                onChange={ this.handleInputChange } class="form-control" placeholder="Author..." />
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Shout it!" class="btn btn-primary"/>
                 </form>
                 <ul>{ shoutoutComponets }</ul>
             </div>

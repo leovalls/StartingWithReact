@@ -14,26 +14,36 @@ export default class Layout extends React.Component {
     }
 
     render() { 
+        const continerStyles = {
+            'height': 'fit-content',
+            'marginTop': '10px',
+            'paddingTop': '10px'
+        };
+
         return ( 
             <div>
-                <nav class="navbar navbar-default bg-primary">
-                    <div class="container-fluid">
+                <nav class="navbar bg-primary">
+                    <div class="container">
                         <div class="navbar-header">
                             <p class="navbar-brand">React!</p>
-                            <Link to='/' class="btn btn-primary navbar-btn" >Home</Link> 
-                            <Link to='/movies-list' class="btn btn-primary navbar-btn" >Movies</Link> 
-                            <Link to='/characters-list' class="btn btn-primary navbar-btn" >Characters</Link>
+                            <div class="btn-group btn-group-toggle">
+                                <Link to='/' class="btn btn-secondary" >Home</Link> 
+                                <Link to='/movies-list' class="btn btn-secondary" >Movies</Link> 
+                                <Link to='/characters-list' class="btn btn-secondary" >Characters</Link>
+                            </div>
                         </div>
                         <p class="navbar-brand">A movies trivia</p>
                     </div>
                 </nav>
-                <div class="row">
-                    <div class="col-sm-6 jumbotron">
-                        <div class="well">{this.props.children}</div>
-                    </div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-4 jumbotron">
-                        <div class="well"><Shoutouts /></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 jumbotron" style={continerStyles}>
+                            <div class="well">{this.props.children}</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-5 jumbotron" style={continerStyles}>
+                            <div class="well"><Shoutouts /></div>
+                        </div>
                     </div>
                 </div>
             </div>

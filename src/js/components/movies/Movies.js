@@ -19,10 +19,15 @@ export default class Movies extends React.Component {
             return <Movie key={movie.episode_id} {...movie} />
         });
 
+        const styles = {
+            'listStyle': 'none',
+            'padding': 0
+        }
+
         return (
             <div>
                 <h2>Movies List</h2>
-                <ul>{moviesList}</ul>
+                <ul style={styles}>{moviesList}</ul>
             </div>
         );
     }
